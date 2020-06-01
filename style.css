@@ -5,26 +5,26 @@
 body {
   color: #fff;
   font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 16px;
   text-transform: uppercase;
   background-image: radial-gradient(
     circle at 50% 0%,
     hsl(214, 47%, 23%),
     hsl(237, 49%, 15%)
   );
-
   min-height: 100vh;
-  padding: 50px;
+  padding: 3.125rem;
 }
 
 header {
   border: 3px solid hsl(217, 16%, 45%);
-  border-radius: 20px;
+  border-radius: 1.25rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  margin: 50px auto;
-  width: 700px;
+  padding: 1.25rem;
+  margin: 3.125rem auto;
+  width: 43.75rem;
 }
 
 h1 {
@@ -42,7 +42,7 @@ h2 {
 
 h3 {
   font-size: 2rem;
-  margin: 50px;
+  margin: 3.125rem;
 }
 
 h4 {
@@ -60,8 +60,8 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 400px;
-  height: 350px;
+  width: 25rem;
+  height: 21.875rem;
   margin: 0 auto;
 }
 
@@ -69,14 +69,14 @@ main {
   border: none;
   border-radius: 50%;
   box-shadow: inset 0 -6px rgba(0, 0, 0, 0.15);
-  height: 150px;
-  width: 150px;
-  margin: 0 25px;
+  height: 9.375rem;
+  width: 9.375rem;
+  margin: 0 1.5625rem;
 }
 
 .btn-circle .wrapper {
-  width: 120px;
-  height: 120px;
+  width: 7.5rem;
+  height: 7.5rem;
   background-color: #fff;
   display: inline-flex;
   align-items: center;
@@ -106,7 +106,7 @@ main {
 }
 
 .container {
-  width: 1200px;
+  width: 75rem;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -114,10 +114,10 @@ main {
 .modal-content {
   background-color: #f0f0f0;
   margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
+  padding: 1.25rem;
   border: 1px solid #888;
-  border-radius: 20px;
-  width: 700px;
+  border-radius: 1.25rem;
+  width: 43.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,55 +125,55 @@ main {
 }
 
 .modal-content img {
-  margin: 50px;
+  margin: 3.125rem;
 }
 
 .modal-content button {
   background-color: transparent;
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 0.3125rem;
+  right: 0.3125rem;
   border: none;
 }
 
 .play-again {
   border: none;
   border-radius: 5px;
-  padding: 10px 25px;
-  margin-top: 25px;
+  padding: 0.625rem 1.5625rem;
+  margin-top: 1.5625rem;
   background-color: #fff;
   color: hsl(349, 70%, 56%);
   font-family: inherit;
-  font-size: 20px;
+  font-size: 1.25rem;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   width: 100%;
-  height: 50px;
+  height: 3.125rem;
 }
 
 .results {
   margin: 0 auto;
-  padding: 50px;
+  padding: 3.125rem;
 }
 
 .rules {
   border: 2px solid #fff;
   border-radius: 5px;
-  padding: 10px 25px;
+  padding: 0.625rem 1.5625rem;
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 1.875rem;
+  right: 1.875rem;
   background-color: transparent;
   color: #fff;
   font-family: inherit;
-  font-size: 20px;
+  font-size: 1.25rem;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
 .score-container {
   background-color: #fff;
-  padding: 20px 40px;
+  padding: 1.25rem 2.5rem;
   border-radius: 10px;
   text-align: center;
 }
@@ -191,12 +191,12 @@ main {
   align-items: center;
   text-align: center;
   margin: 0 auto;
-  width: 700px;
+  width: 43.75rem;
 }
 
 .selection .btn-circle {
   transform: scale(1.75);
-  margin: 75px;
+  margin: 4.6875rem;
 }
 
 #modal {
