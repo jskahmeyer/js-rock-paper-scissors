@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+    <!-- Score Rules You Picked The House Picked You Win You Lose Play Again -->
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h2>
+          <span>Rock</span>
+          <span>Paper</span>
+          <span>Scissors</span>
+        </h2>
+        <div class="score-container">
+          <h4>Score</h4>
+          <p id="score">0</p>
+        </div>
+      </header>
+      <main id="step-one">
+        <button class="btn-circle paper" id="paper">
+          <span class="wrapper"
+            ><img src="images/icon-paper.svg" alt="paper"
+          /></span>
+        </button>
+        <button class="btn-circle scissors" id="scissors">
+          <span class="wrapper"
+            ><img src="images/icon-scissors.svg" alt="scissors"
+          /></span>
+        </button>
+        <button class="btn-circle rock" id="rock">
+          <span class="wrapper"
+            ><img src="images/icon-rock.svg" alt="rock"
+          /></span>
+        </button>
+      </main>
+
+      <div id="results">
+        <div id="selection" class="selection">
+          <div id="step-two">
+            <h3>You Picked</h3>
+            <button id="user-choice"></button>
+          </div>
+          <div id="step-four">
+            <h1 id="message">Message</h1>
+            <button id="reset" class="play-again">Play again</button>
+          </div>
+          <div id="step-three">
+            <h3>The House Picked</h3>
+            <button id="computer-choice"></button>
+          </div>
+        </div>
+      </div>
+
+      <button id="rules" class="rules">Rules</button>
+      <div id="modal">
+        <div class="modal-content">
+          <img src="images/image-rules.svg" alt="rock paper scissors rules" />
+          <button id="close">
+            <img src="images/icon-close.svg" alt="close" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- <footer>
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by Simone Kahmeyer.
+    <footer> -->
+    <script src="rps.js"></script>
+  </body>
+</html>

@@ -1,0 +1,224 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  text-transform: uppercase;
+  background-image: radial-gradient(
+    circle at 50% 0%,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+  );
+
+  min-height: 100vh;
+  padding: 50px;
+}
+
+header {
+  border: 3px solid hsl(217, 16%, 45%);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 50px auto;
+  width: 700px;
+}
+
+h1 {
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-size: 3rem;
+  line-height: 0.8;
+}
+
+h3 {
+  font-size: 2rem;
+  margin: 50px;
+}
+
+h4 {
+  color: hsl(229, 64%, 46%);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+main {
+  background-image: url(images/bg-triangle.svg);
+  background-repeat: no-repeat;
+  background-size: 75%;
+  background-position-x: center;
+  background-position-y: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 400px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+.btn-circle {
+  border: none;
+  border-radius: 50%;
+  box-shadow: inset 0 -6px rgba(0, 0, 0, 0.15);
+  height: 150px;
+  width: 150px;
+  margin: 0 25px;
+}
+
+.btn-circle .wrapper {
+  width: 120px;
+  height: 120px;
+  background-color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: inset 0 6px rgba(0, 0, 0, 0.15);
+}
+
+.paper {
+  background: linear-gradient(
+    to bottom,
+    hsl(230, 89%, 62%),
+    hsl(230, 89%, 65%)
+  );
+}
+
+.rock {
+  background: linear-gradient(
+    to bottom,
+    hsl(349, 71%, 52%),
+    hsl(349, 70%, 56%)
+  );
+}
+
+.scissors {
+  background: linear-gradient(to bottom, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+}
+
+.container {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.modal-content {
+  background-color: #f0f0f0;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 20px;
+  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.modal-content img {
+  margin: 50px;
+}
+
+.modal-content button {
+  background-color: transparent;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: none;
+}
+
+.play-again {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 25px;
+  margin-top: 25px;
+  background-color: #fff;
+  color: hsl(349, 70%, 56%);
+  font-family: inherit;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  width: 100%;
+  height: 50px;
+}
+
+.results {
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.rules {
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: transparent;
+  color: #fff;
+  font-family: inherit;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.score-container {
+  background-color: #fff;
+  padding: 20px 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.score-container p {
+  color: hsl(229, 25%, 31%);
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.selection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  width: 700px;
+}
+
+.selection .btn-circle {
+  transform: scale(1.75);
+  margin: 75px;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+#results,
+#step-four {
+  display: none;
+}
+
+#step-three {
+  visibility: hidden;
+}
+
+#step-four {
+  width: auto;
+}
