@@ -1,3 +1,25 @@
+// TODO: add radial gradient around winner
+
+// .effect-left::before {
+//     content: "";
+//     background: radial-gradient(#2C3B5A 38%, #293857 38% 50%, #233455 50% 100%);
+//     z-index: -3;
+//     border-radius: 50%;
+//     position: absolute;
+//     margin: 1.5rem;
+// }
+
+// .effect-right::before {
+//     content: "";
+//     background: radial-gradient(#2C3B5A 38%, #293857 38% 50%, #233455 50% 100%);
+//     z-index: -3;
+//     border-radius: 50%;
+//     position: absolute;
+//     margin: 1.5rem;
+// }
+
+// TODO: fix timing issues with winner reveal
+
 const choices = ["rock", "paper", "scissors"];
 
 const buttons = document.querySelectorAll(".btn-circle");
@@ -8,21 +30,22 @@ let userScore = 0;
 let message;
 let stepOne = document.getElementById("step-one");
 let stepTwo = document.getElementById("results");
+let stepThree = document.getElementById("step-three");
+let stepFour = document.getElementById("step-four");
 let modal = document.getElementById("modal");
 let displayUserChoice = document.getElementById("user-choice");
 let displayComputerChoice = document.getElementById("computer-choice");
-let timer;
-let timer2;
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
     resetGame();
-    stepOne.style.display = "none";
+    // stepOne.style.display = "none";
+    // stepThree.style.visibility = "hidden";
+    // stepFour.style.display = "none";
 
     userChoice = button.getAttribute("id");
     console.log(userChoice);
     makeComputerChoice();
-
     getStepTwo();
     setTimeout(() => {
       getStepThree();
@@ -85,8 +108,9 @@ function computerButton() {
 function resetGame() {
   displayUserChoice.classList = "btn-circle";
   displayComputerChoice.classList = "btn-circle";
-  clearTimeout(timer);
-  clearTimeout(timer2);
+  stepOne.style.display = "none";
+  stepThree.style.visibility = "hidden";
+  stepFour.style.display = "none";
 }
 
 function compare() {
@@ -121,24 +145,27 @@ function getStepTwo() {
   stepTwo.style.display = "flex";
 
   userButton();
-  computerButton();
 }
 
 function getStepThree() {
-  let stepThree = document.getElementById("step-three");
+  computerButton();
   stepThree.style.visibility = "visible";
 }
 
 function getStepFour(userChoice, computerChoice) {
-  let stepFour = document.getElementById("step-four");
   let selection = document.getElementById("selection");
-  stepFour.style.display = "inline";
-  selection.style.justifyContent = "space-between";
-  selection.style.width = "1000px";
   compare(userChoice, computerChoice);
   if (message == "you win") {
+    // displayUserChoice.classList.add("btn-winner");
     userScore += 1;
+  } else if (message == "you lose") {
+    // displayComputerChoice.classList.add("btn-winner");
+    userScore -= 1;
   }
   document.getElementById("score").innerHTML = userScore;
   document.getElementById("message").innerHTML = message;
+
+  selection.style.justifyContent = "space-between";
+  selection.style.width = "1000px";
+  stepFour.style.display = "inline";
 }

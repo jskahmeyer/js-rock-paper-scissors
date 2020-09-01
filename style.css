@@ -13,7 +13,7 @@ body {
     hsl(237, 49%, 15%)
   );
   min-height: 100vh;
-  padding: 3.125rem;
+  padding: 0.5rem 3.125rem;
 }
 
 header {
@@ -136,6 +136,11 @@ main {
   border: none;
 }
 
+.modal-content h3 {
+  color: black;
+  /* display: block; */
+}
+
 .play-again {
   border: none;
   border-radius: 5px;
@@ -210,6 +215,10 @@ main {
   overflow: auto;
 }
 
+#results h3 {
+  min-height: 64px;
+}
+
 #results,
 #step-four {
   display: none;
@@ -221,4 +230,33 @@ main {
 
 #step-four {
   width: auto;
+}
+
+/* .btn-winner {
+  background: radial-gradient(#2c3b5a 38%, #293857 38% 50%, #233455 50% 100%);
+  z-index: -3;
+  border-radius: 50%;
+  /* position: absolute; */
+/* margin: 1.5rem; */
+/* } */
+
+@media screen and (max-width: 768px) {
+  header {
+    width: 100%;
+  }
+
+  .rules {
+    position: static;
+    /* margin: 0 auto; */
+    width: 175px;
+    /* display: block; */
+    /* bottom: 55px; */
+    /* left: calc((100%-175px) / 2) px; */
+    display: block;
+    margin: 15vh auto 5vh auto;
+  }
+
+  #step-one {
+    margin-top: 15vh;
+  }
 }
