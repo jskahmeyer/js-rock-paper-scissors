@@ -32,6 +32,7 @@ let stepOne = document.getElementById("step-one");
 let stepTwo = document.getElementById("results");
 let stepThree = document.getElementById("step-three");
 let stepFour = document.getElementById("step-four");
+let btnPlayAgain = document.getElementById("reset");
 let modal = document.getElementById("modal");
 let displayUserChoice = document.getElementById("user-choice");
 let displayComputerChoice = document.getElementById("computer-choice");
@@ -142,7 +143,7 @@ function compare() {
 }
 
 function getStepTwo() {
-  stepTwo.style.display = "flex";
+  stepTwo.style.display = "grid";
 
   userButton();
 }
@@ -156,7 +157,8 @@ function getStepFour(userChoice, computerChoice) {
   let selection = document.getElementById("selection");
   compare(userChoice, computerChoice);
   if (message == "you win") {
-    // displayUserChoice.classList.add("btn-winner");
+    btnPlayAgain.style.color = "hsl(237, 49%, 15%)";
+    // getElementById("user-container").classList.add("btn-winner");
     userScore += 1;
   } else if (message == "you lose") {
     // displayComputerChoice.classList.add("btn-winner");
@@ -165,7 +167,7 @@ function getStepFour(userChoice, computerChoice) {
   document.getElementById("score").innerHTML = userScore;
   document.getElementById("message").innerHTML = message;
 
-  selection.style.justifyContent = "space-between";
-  selection.style.width = "1000px";
+  // selection.style.justifyContent = "space-between";
+  // selection.style.width = "1000px";
   stepFour.style.display = "inline";
 }
