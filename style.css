@@ -75,6 +75,14 @@ main {
   margin: 0 1.5625rem;
 }
 
+.btn-circle::before {
+  background: radial-gradient(#2c3b5a 38%, #293857 38% 50%, #233455 50% 100%);
+  z-index: -3;
+  border-radius: 50%;
+  position: absolute;
+  margin: 1.5rem;
+}
+
 .btn-circle .wrapper {
   width: 7.5rem;
   height: 7.5rem;
@@ -86,26 +94,6 @@ main {
   box-shadow: inset 0 6px rgba(0, 0, 0, 0.15);
 }
 
-.paper {
-  background: linear-gradient(
-    to bottom,
-    hsl(230, 89%, 62%),
-    hsl(230, 89%, 65%)
-  );
-}
-
-.rock {
-  background: linear-gradient(
-    to bottom,
-    hsl(349, 71%, 52%),
-    hsl(349, 70%, 56%)
-  );
-}
-
-.scissors {
-  background: linear-gradient(to bottom, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-}
-
 .container {
   width: 75rem;
   max-width: 100%;
@@ -114,32 +102,41 @@ main {
 
 .modal-content {
   background-color: #f0f0f0;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto;
   padding: 1.25rem;
   border: 1px solid #888;
   border-radius: 1.25rem;
-  width: 43.75rem;
+  width: 450px;
   display: flex;
+  text-align: left;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   position: relative;
-}
-
-.modal-content img {
-  margin: 3.125rem;
 }
 
 .modal-content button {
   background-color: transparent;
   position: absolute;
-  top: 0.3125rem;
-  right: 0.3125rem;
+  top: 20px;
+  right: 20px;
   border: none;
 }
 
 .modal-content h3 {
   color: black;
-  /* display: block; */
+
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  margin: 0;
+}
+
+.paper {
+  background: linear-gradient(
+    to bottom,
+    hsl(230, 89%, 62%),
+    hsl(230, 89%, 65%)
+  );
 }
 
 .play-again {
@@ -162,6 +159,14 @@ main {
   padding: 3.125rem;
 }
 
+.rock {
+  background: linear-gradient(
+    to bottom,
+    hsl(349, 71%, 52%),
+    hsl(349, 70%, 56%)
+  );
+}
+
 .rules {
   border: 2px solid #fff;
   border-radius: 5px;
@@ -175,6 +180,10 @@ main {
   font-size: 1.25rem;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+.scissors {
+  background: linear-gradient(to bottom, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
 }
 
 .score-container {
@@ -193,12 +202,8 @@ main {
 
 .selection {
   display: grid;
-  /* justify-content: space-between;
-  align-items: center; */
   text-align: center;
   margin: 0 auto;
-  /* width: 43.75rem; */
-  /* width: 90vw; */
 }
 
 .selection .btn-circle {
@@ -224,13 +229,18 @@ main {
   width: 100%;
 }
 
+#results,
+#step-four {
+  display: none;
+}
+
 #results h3 {
   min-height: 64px;
 }
 
-#results,
-#step-four {
-  display: none;
+#rules-img {
+  margin-top: 100px;
+  margin-bottom: 50px;
 }
 
 #step-two {
@@ -248,17 +258,13 @@ main {
   padding: 150px 0;
 }
 
-.btn-circle::before {
-  background: radial-gradient(#2c3b5a 38%, #293857 38% 50%, #233455 50% 100%);
-  z-index: -3;
-  border-radius: 50%;
-  position: absolute;
-  margin: 1.5rem;
-}
-
 @media screen and (max-width: 768px) {
   header {
     width: 100%;
+  }
+
+  h2 {
+    font-size: 2rem;
   }
 
   h3 {
@@ -267,11 +273,7 @@ main {
 
   .rules {
     position: static;
-    /* margin: 0 auto; */
     width: 175px;
-    /* display: block; */
-    /* bottom: 55px; */
-    /* left: calc((100%-175px) / 2) px; */
     display: block;
     margin: 15vh auto 5vh auto;
   }
@@ -279,6 +281,24 @@ main {
   .selection .btn-circle {
     transform: none;
     margin: 20px;
+  }
+
+  .modal-content {
+    width: 80vw;
+    height: 450px;
+    flex-direction: column;
+  }
+
+  .score-container {
+    padding: 15px 25px;
+  }
+
+  .score-container h4 {
+    letter-spacing: 1px;
+  }
+
+  .score-container p {
+    font-size: 3rem;
   }
 
   #results {
